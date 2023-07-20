@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+    <activity
+        android:id="@+id/brazOnly"
+        android:name="com.waxxvibe.app.BrazOnly"
+        android:label="activity_braz_only"
+        tools:layout="@layout/activity_braz_only" />
+    <activity
+        android:id="@+id/brazPlusAddOn"
+        android:name="com.waxxvibe.app.BrazPlusAddOn"
+        android:label="activity_braz_plus_add_on"
+        tools:layout="@layout/activity_braz_plus_add_on" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.waxxvibe.app.Home"
+        android:label="Home"
+        tools:layout="@layout/home">
+        <action
+            android:id="@+id/action_home2_to_brazOnly"
+            app:destination="@id/brazOnly" />
+        <action
+            android:id="@+id/action_home2_to_brazPlusAddOn"
+            app:destination="@id/brazPlusAddOn" />
+    </fragment>
+</navigation>
